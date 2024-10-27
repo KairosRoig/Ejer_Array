@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+        const valores = [1, 2, 3, 4, 2, 3, 5, 6, 5, 7];
+        const unicos = [...new Set(valores)];
+        const resultado = document.getElementById("resultado");
+        resultado.innerHTML += `<p>Array original: ${valores.join(", ")}</p>`;
+        resultado.innerHTML += `<p>Array de valores únicos: ${unicos.join(", ")}</p>`;
+    </script>
+</body>
+</html>

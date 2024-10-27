@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script>
+        const letras = [];
+        const resultado = document.getElementById("resultado");
+        letras.unshift("A", "B", "C");
+        resultado.innerHTML += "<h2>Array después de agregar A, B, y C al principio:</h2>";
+        resultado.innerHTML += `<p>${letras.join(", ")}</p>`;
+        letras.push("D", "E");
+        resultado.innerHTML += "<h2>Array después de agregar D y E al final:</h2>";
+        resultado.innerHTML += `<p>${letras.join(", ")}</p>`;
+        letras.shift();
+        letras.pop();
+        resultado.innerHTML += "<h2>Array final después de eliminar el primer y último elemento:</h2>";
+        resultado.innerHTML += `<p>${letras.join(", ")}</p>`;
+    </script>
+</body>
+</html>

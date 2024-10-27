@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        const frecuencias = Array(10).fill(0);
+        for (let i = 0; i < 10000; i++) {
+            const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            frecuencias[numeroAleatorio - 1]++;
+        }
+        console.log("Frecuencias:");
+        for (let i = 0; i < frecuencias.length; i++) {
+            console.log(`Número ${i + 1}: ${frecuencias[i]}`);
+        }
+    </script>
+</body>
+</html>

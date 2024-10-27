@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script>
+        const paises = ["España", "Francia", "Alemania", "Italia"];
+        const resultado = document.getElementById("resultado");
+        function mostrarPaises(array) {
+            resultado.innerHTML += "<ul>";
+            array.forEach(pais => {
+                resultado.innerHTML += `<li>${pais}</li>`;
+            });
+            resultado.innerHTML += "</ul>";
+        }
+        resultado.innerHTML += "<h2>Lista de países:</h2>";
+        mostrarPaises(paises);
+        paises.shift();
+        resultado.innerHTML += "<h2>Lista de países después de eliminar el primero:</h2>";
+        mostrarPaises(paises);
+    </script>
+</body>
+</html>

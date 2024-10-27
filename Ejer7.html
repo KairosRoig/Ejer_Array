@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        function generarCombinaciones(numCombinaciones, cantidadPorCombinacion, rango) {
+            const combinaciones = [];
+            for (let i = 0; i < numCombinaciones; i++) {
+                const combinacion = new Set();
+                while (combinacion.size < cantidadPorCombinacion) {
+                    const numeroAleatorio = Math.floor(Math.random() * rango) + 1;
+                    combinacion.add(numeroAleatorio);
+                }
+                combinaciones.push([...combinacion].sort((a, b) => a - b));
+            }
+            return combinaciones;
+        }
+        const combinaciones = generarCombinaciones(50, 6, 49);
+        console.log("Combinaciones aleatorias de la lotería:");
+        combinaciones.forEach((combinacion, index) => {
+            console.log(`Combinación ${index + 1}: ${combinacion.join(", ")}`);
+        });
+    </script>
+</body>
+</html>
